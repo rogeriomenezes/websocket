@@ -1,0 +1,26 @@
+{
+  "name": "rogeriomenezes-websocket",
+  "version": "1.0.0",
+  "description": "A Websocket Server Application for comunication",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogeriomenezes/websocket.git"
+  },
+  "author": "Tiago Felipe <tiago@tiagofelipe.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogeriomenezes/websocket/issues"
+  },
+  "homepage": "https://github.com/rogeriomenezes/websocket#readme",
+  "dependencies": {
+    "ws": "^5.2.1"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.0",
+    "utf-8-validate": "^5.0.1"
+  }
+}
