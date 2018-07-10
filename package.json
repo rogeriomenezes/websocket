@@ -2,11 +2,11 @@
   "name": "rogeriomenezes-websocket",
   "version": "1.0.0",
   "description": "A Websocket Server Application for comunication",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "test",
-    "dev": "node index.js --dev",
-    "production": "node index.js --prod"
+    "dev": "node src/server.js --dev",
+    "production": "node src/server.js --prod"
   },
   "repository": {
     "type": "git",
