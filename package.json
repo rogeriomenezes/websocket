@@ -4,7 +4,8 @@
   "description": "A Websocket Server Application for comunication",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "optionalDependencies": {
     "bufferutil": "^4.0.0",
     "utf-8-validate": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0"
   }
 }

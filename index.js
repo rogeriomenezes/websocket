@@ -15,34 +15,55 @@ const wss = new WebSocket.Server({
 });
 
 wss.on('connection', function connection (ws, req) {
+  const ip = req.connection.remoteAddress;
+  console.log('Connection open from ', ip)
   ws.on('message', function incoming (message) {
     console.log('received: %s', message);
-    const ip = req.connection.remoteAddress;
-    console.log(ip)
     //console.log(req.connection)
     //console.log(req.session)
     //console.log(req)
   });
-  
+
   ws.on('listening', function listening (t) {
     console.log('Listening...')
   })
 
-  ws.on('close', function listening (t, a) {
-    console.log('Connection close', t, a)
-    wss.clients.forEach(function each(client) {
-      console.log('Client ', client)
-    })
+  ws.on('open', function listening (t, a) {
+    const ip = req.connection.remoteAddress;
+    console.log('Connection open from ', ip)
   })
 
-  ws.send(['teste', 'algo']);
+  ws.on('close', function listening (t, a) {
+    console.log('Connection close', t, a)
+  })
+
+  ws.send('Hello Brother, i am a websocket server :)');
 });
 
-const interval = setTimeout(function ping() {
-  wss.clients.forEach(function each(client) {
+const interval = setInterval(function ping () {
+  wss.clients.forEach(function each (client) {
     if (client.readyState === WebSocket.OPEN) {
-      client.send('teste', {test: 1});
+      let data = {
+        type: 'lance',
+        data: {
+          leilao: 1,
+          lote: {
+            id: 10,
+            lance: {
+              id: 200,
+              data: '2018-07-10 09:01:27',
+              valor: 13200.00,
+              arrematante: {
+                id: 50,
+                apelido: 'TIAGOFELIPE',
+                localidade: 'Montes Claros - MG'
+              }
+            }
+          }
+        }
+      }
+      client.send(JSON.stringify(data));
       //console.log(client.session)
     }
   });
-}, 10000);
+}, 5000);
