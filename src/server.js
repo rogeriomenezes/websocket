@@ -65,8 +65,22 @@ wss.on('connection', function connection (ws, req) {
    * Process an message and parse event. If valid, transmits for clients
    */
   ws.on('message', function incoming (message) {
-    console.log(message)
+    log(`Try to send message by ${ip}: ${message}`, 1)
+    let authorized = false;
+    // Atualmente só permite a transmissão por parte da API com um token válido
+    if (typeof req.headers['token'] !== 'undefined' && req.headers['token'] === config.TOKEN) {
+      authorized = true;
+    }
+
+    if (!authorized) {
+      ws.send('Você não tem autorização :/')
+      log(`Client ${ip} has no permission to send`, 1)
+      return;
+    }
+
+    //Authorized
     wss.broadcast(message)
+    log(`Message by ${ip} sent`, 1);
   });
 
   ws.on('close', function listening (code, reason) {
