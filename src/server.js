@@ -7,6 +7,15 @@ process.argv.forEach((val, index) => {
   }
 });
 
+const config = require(`./${env}.env`);
+
+function noop () {
+}
+
+function heartbeat () {
+  this.isAlive = true;
+}
+
 /**
  * Register an log
  * @param m
@@ -18,9 +27,9 @@ const log = function (m, level) {
   console.log(m);
 }
 
-log(`Start WebSocket Server in ${env} environment`, 1)
+log(`Start WebSocket Server in ${env} environment on port ${config.PORT}`, 1)
 
-const wss = new WebSocket.Server({
+const options = {
   verifyClient: (info, done) => {
     log('Try to parsing session from request...');
 
@@ -34,11 +43,12 @@ const wss = new WebSocket.Server({
     done(logged);
 
   },
-  port: 8444
-});
+  port: config.PORT
+};
+const wss = new WebSocket.Server(options);
 
-wss.broadcast = function broadcast(data) {
-  wss.clients.forEach(function each(client) {
+wss.broadcast = function broadcast (data) {
+  wss.clients.forEach(function each (client) {
     if (client.readyState === WebSocket.OPEN) {
       client.send(data);
     }
@@ -48,6 +58,8 @@ wss.broadcast = function broadcast(data) {
 wss.on('connection', function connection (ws, req) {
   const ip = req.connection.remoteAddress;
   log(`Connection open from ${ip}`, 1)
+  ws.isAlive = true;
+  ws.on('pong', heartbeat);
 
   /**
    * Process an message and parse event. If valid, transmits for clients
@@ -61,3 +73,11 @@ wss.on('connection', function connection (ws, req) {
     log(`Connection close from ${ip} with code ${code}, reason: ${reason}`, 1)
   })
 });
+
+const interval = setInterval(function ping () {
+  wss.clients.forEach(function each (ws) {
+    if (ws.isAlive === false) return ws.terminate();
+    ws.isAlive = false;
+    ws.ping(noop);
+  });
+}, 30000);
