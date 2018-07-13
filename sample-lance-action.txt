@@ -1,1 +1,0 @@
-"{"action":"lance","data":{"leilao":1,"lote":{"id":10,"lance":{"id":200,"data":"2018-07-10 09:01:27","valor":13200,"arrematante":{"id":50,"apelido":"TIAGOFELIPE","localidade":"Montes Claros - MG"}}}}}"
