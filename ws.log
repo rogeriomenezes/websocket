@@ -1,0 +1,160 @@
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module './production.env'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (C:\src\rogeriomenezes\websocket\src\server.js:10:16)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+Start WebSocket Server in dev environment on port 8888
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"statusLeilao","data":{"leilao":4,"status":6}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"routing-lance","data":{"arrematante":1,"lote":22797,"valor":28600}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192991,"data":{"date":"2019-08-07 09:35:52.492633","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":28600,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192992,"data":{"date":"2019-08-07 09:39:12.007796","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":28800,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192993,"data":{"date":"2019-08-07 09:40:15.298500","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":29000,"arrematante":{"id":489,"apelido":"TIAGOFELIPE","pessoa":{"id":526,"nome":"Tiago Felipe Amorim Moreira Reis","essencial":{"cidade":"Montes Claros","uf":"MG"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192994,"data":{"date":"2019-08-07 09:40:19.616897","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":29200,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192995,"data":{"date":"2019-08-07 09:40:27.778539","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":29400,"arrematante":{"id":489,"apelido":"TIAGOFELIPE","pessoa":{"id":526,"nome":"Tiago Felipe Amorim Moreira Reis","essencial":{"cidade":"Montes Claros","uf":"MG"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192996,"data":{"date":"2019-08-07 09:40:33.100534","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":29600,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192997,"data":{"date":"2019-08-07 09:40:36.032103","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":29800,"arrematante":{"id":489,"apelido":"TIAGOFELIPE","pessoa":{"id":526,"nome":"Tiago Felipe Amorim Moreira Reis","essencial":{"cidade":"Montes Claros","uf":"MG"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192998,"data":{"date":"2019-08-07 09:40:42.692498","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":30000,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":192999,"data":{"date":"2019-08-07 09:40:47.846252","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":30200,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":193000,"data":{"date":"2019-08-07 09:40:58.703377","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":30400,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":193001,"data":{"date":"2019-08-07 09:41:03.662239","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":30600,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":193002,"data":{"date":"2019-08-07 09:45:13.835424","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":30800,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":193003,"data":{"date":"2019-08-07 09:58:54.876960","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":31000,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":193004,"data":{"date":"2019-08-07 10:03:38.246221","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":31200,"arrematante":{"id":489,"apelido":"TIAGOFELIPE","pessoa":{"id":526,"nome":"Tiago Felipe Amorim Moreira Reis","essencial":{"cidade":"Montes Claros","uf":"MG"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":193005,"data":{"date":"2019-08-07 10:03:51.733983","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":31400,"arrematante":{"id":1,"apelido":"PLATEIA","pessoa":{"id":3,"nome":"Arrematante plateia","essencial":{"cidade":"Rio de Janeiro","uf":"RJ"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Try to send message by ::ffff:127.0.0.1: {"type":"lance","data":{"leilao":4,"lote":{"id":22797,"status":1,"statusMessage":"Aberto para Lances","lance":{"id":193006,"data":{"date":"2019-08-07 10:08:36.278781","timezone_type":3,"timezone":"America\/Sao_Paulo"},"valor":31600,"arrematante":{"id":489,"apelido":"TIAGOFELIPE","pessoa":{"id":526,"nome":"Tiago Felipe Amorim Moreira Reis","essencial":{"cidade":"Montes Claros","uf":"MG"}}}}}}}
+Message by ::ffff:127.0.0.1 sent
+Connection close from ::ffff:127.0.0.1 with code 1006, reason: 
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Try to parsing session from request...
+Session is parsed!
+Connection open from ::ffff:127.0.0.1
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 
+Connection close from ::ffff:127.0.0.1 with code 1001, reason: 

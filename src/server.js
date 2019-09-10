@@ -56,10 +56,26 @@ wss.broadcast = function broadcast (data) {
 };
 
 wss.on('connection', function connection (ws, req) {
-  const ip = req.connection.remoteAddress;
+  
+  const ip = typeof req.headers['x-forwarded-for'] !== 'undefined' ? req.headers['x-forwarded-for'].split(/\s*,\s*/)[0] : req.connection.remoteAddress;
+  
   log(`Connection open from ${ip}`, 1)
   ws.isAlive = true;
   ws.on('pong', heartbeat);
+  
+  if (typeof req.headers['token'] !== 'undefined' && typeof req.headers['type'] !== 'undefined' && String(req.headers['type']) === 'gateway') {
+    console.log("\x1b[32m%s\x1b[0m", 'GATEWAY CONNECTED')
+    ws.isGateway = true
+    /*ws.$interval = setInterval(() => {
+      if (ws.isAlive === false){
+        clearInterval(ws.$interval)
+        console.log("\x1b[31m%s\x1b[0m", 'GATEWAY DISCONNECTED')
+        ws.terminate();
+      }
+      ws.isAlive = false;
+      ws.ping(noop);
+    }, 10000)*/
+  }
 
   /**
    * Process an message and parse event. If valid, transmits for clients
@@ -90,7 +106,12 @@ wss.on('connection', function connection (ws, req) {
 
 const interval = setInterval(function ping () {
   wss.clients.forEach(function each (ws) {
-    if (ws.isAlive === false) return ws.terminate();
+    if (ws.isAlive === false){
+      if(typeof ws.isGateway !== 'undefined'){
+        console.log("\x1b[31m%s\x1b[0m", 'GATEWAY DISCONNECTED')
+      }
+      return ws.terminate();
+    }
     ws.isAlive = false;
     ws.ping(noop);
   });
