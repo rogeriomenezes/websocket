@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/rogeriomenezes/websocket#readme",
   "dependencies": {
-    "ws": "^5.2.1"
+    "ws": "^7.4.5"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.0",
